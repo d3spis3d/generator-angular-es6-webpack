@@ -9,7 +9,7 @@ module.exports = yeoman.generators.Base.extend({
 
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the flawless ' + chalk.red('AngularEs6Webpack') + ' generator!'
+      'Welcome to the flawless ' + chalk.red('Angular ES6 Webpack') + ' generator!'
     ));
 
     var prompts = [{

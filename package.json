@@ -1,9 +1,8 @@
 {
   "name": "generator-angular-es6-webpack",
-  "version": "0.0.0",
-  "description": "Yeoman generator",
+  "version": "0.0.1",
+  "description": "Yeoman generator for Angular with ES6 and Webpack",
   "license": "MIT",
-  "main": "app/index.js",
   "repository": "d3spis3d/generator-angular-es6-webpack",
   "author": {
     "name": "Daniel Budden",
@@ -14,13 +13,13 @@
     "test": "mocha"
   },
   "files": [
-    "generators"
+    "generators/app"
   ],
   "keywords": [
     "yeoman-generator"
   ],
   "dependencies": {
-    "yeoman-generator": "^0.19.0",
+    "yeoman-generator": "^0.22.0",
     "chalk": "^1.0.0",
     "yosay": "^1.0.2"
   },
