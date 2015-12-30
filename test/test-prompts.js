@@ -49,4 +49,12 @@ describe('angular-es6-webpack:app with prompt answers', function () {
     it('should not have ui-router', function() {
         assert.fileContent('package.json', /"angular-route": "1\.4\.6"/);
     });
+
+    it('should have user defined angular module name', function() {
+        assert.fileContent('app/app.js', /angular\.module\('TestAngularApplication'/);
+    });
+
+    it('should import the correct router', function() {
+        assert.fileContent('app/app.js', /import 'angular-route'/);
+    });
 });

@@ -44,4 +44,12 @@ describe('angular-es6-webpack:app with default prompt answers', function () {
     it('should have ui-router', function() {
         assert.fileContent('package.json', /"angular-ui-router":/);
     });
+
+    it('should have default angular module name', function() {
+        assert.fileContent('app/app.js', /angular\.module\('AngularES6App'/);
+    });
+
+    it('should import the correct router', function() {
+        assert.fileContent('app/app.js', /import 'angular-ui-router'/);
+    });
 });
