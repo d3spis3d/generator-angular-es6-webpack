@@ -65,12 +65,22 @@ module.exports = yeoman.Base.extend({
                 this.destinationPath('app/services')
             );
 
+            this.fs.copy(
+                this.templatePath('app/images'),
+                this.destinationPath('app/images')
+            );
+
             this.template('app/_app.js', 'app/app.js', context);
             this.template('app/_index.html', 'app/index.html', context);
 
             this.fs.copy(
                 this.templatePath('app/components/main/main.html'),
                 this.destinationPath('app/components/main/main.html')
+            );
+
+            this.fs.copy(
+                this.templatePath('app/components/main/main.scss'),
+                this.destinationPath('app/components/main/main.scss')
             );
 
             this.template('app/components/main/_main.routes.js', 'app/components/main/main.routes.js', context);

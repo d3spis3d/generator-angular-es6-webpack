@@ -1,4 +1,5 @@
 import 'components/main/main.html';
+import 'components/main/main.scss';
 import mainCtrl from 'components/main/main-controller';
 
 <% if(uiRouter) { %>export default /*@ngInject*/ function($stateProvider, $urlRouterProvider) {

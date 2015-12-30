@@ -28,6 +28,10 @@ module.exports = {
             {
                 test: /\.scss$/,
                 loaders: ['style', 'css?root=' + __dirname + '/app', 'autoprefixer-loader?browsers=last 2 versions', 'sass'],
+            },
+            {
+                test: /\.png$/,
+                loader: 'file-loader'
             }
         ]
     },

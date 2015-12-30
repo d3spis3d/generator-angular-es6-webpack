@@ -34,7 +34,8 @@ describe('angular-es6-webpack:app with prompt answers', function () {
             'app/directives/directives.js',
             'app/components/main/main.routes.js',
             'app/components/main/main.html',
-            'app/components/main/main-controller.js'
+            'app/components/main/main-controller.js',
+            'app/images/yeoman.png'
         ]);
     });
 
