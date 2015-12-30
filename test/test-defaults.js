@@ -21,7 +21,10 @@ describe('angular-es6-webpack:app with default prompt answers', function () {
             'webpack.config.js',
             'test/spec/tests.webpack.js',
             'test/karma.conf.js',
-            'test/karma.ci.conf.js'
+            'test/karma.ci.conf.js',
+            'app/app.js',
+            'app/services/services.js',
+            'app/directives/directives.js'
         ]);
     });
 

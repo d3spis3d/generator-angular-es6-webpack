@@ -52,6 +52,18 @@ module.exports = yeoman.Base.extend({
             this.template('_package.json', 'package.json', context);
 
             this.fs.copy(
+                this.templatePath('app/directives'),
+                this.destinationPath('app/directives')
+            );
+
+            this.fs.copy(
+                this.templatePath('app/services'),
+                this.destinationPath('app/services')
+            );
+
+            this.template('app/_app.js', 'app/app.js', context);
+
+            this.fs.copy(
                 this.templatePath('test'),
                 this.destinationPath('test')
             );

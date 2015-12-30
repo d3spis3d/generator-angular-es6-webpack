@@ -26,7 +26,10 @@ describe('angular-es6-webpack:app with prompt answers', function () {
             'webpack.config.js',
             'test/spec/tests.webpack.js',
             'test/karma.conf.js',
-            'test/karma.ci.conf.js'
+            'test/karma.ci.conf.js',
+            'app/app.js',
+            'app/services/services.js',
+            'app/directives/directives.js'
         ]);
     });
 
@@ -39,11 +42,11 @@ describe('angular-es6-webpack:app with prompt answers', function () {
         ]);
     });
 
-    it('should have default name', function() {
+    it('should have user defined name', function() {
         assert.fileContent('package.json', /"name": "test-angular-application"/);
     });
 
-    it('should have ui-router', function() {
+    it('should not have ui-router', function() {
         assert.fileContent('package.json', /"angular-route": "1\.4\.6"/);
     });
 });
