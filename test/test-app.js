@@ -17,7 +17,12 @@ describe('angular-es6-webpack:app', function () {
         assert.file([
             'package.json',
             '.editorconfig',
-            '.eslintrc'
+            '.eslintrc',
+            '.gitignore',
+            'webpack.config.js',
+            'test/spec/tests.webpack.js',
+            'test/karma.conf.js',
+            'test/karma.ci.conf.js'
         ]);
     });
 });
