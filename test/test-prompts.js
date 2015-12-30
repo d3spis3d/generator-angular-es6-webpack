@@ -29,7 +29,10 @@ describe('angular-es6-webpack:app with prompt answers', function () {
             'test/karma.ci.conf.js',
             'app/app.js',
             'app/services/services.js',
-            'app/directives/directives.js'
+            'app/directives/directives.js',
+            'app/components/main/main.routes.js',
+            'app/components/main/main.html',
+            'app/components/main/main-controller.js'
         ]);
     });
 

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title><%= appName %></title>
+    </head>
+    <body>
+        <div ng-app="<%= appName.replace(/\s/g, '') %>">
+           	<% if(uiRouter) { %><div ui-view></div><% } else { %><div ng-view></div><% } %>
+        </div>
+        <script src="http://localhost:9001/webpack-dev-server.js"></script>
+    </body>
+</html>

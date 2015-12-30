@@ -24,7 +24,10 @@ describe('angular-es6-webpack:app with default prompt answers', function () {
             'test/karma.ci.conf.js',
             'app/app.js',
             'app/services/services.js',
-            'app/directives/directives.js'
+            'app/directives/directives.js',
+            'app/components/main/main.routes.js',
+            'app/components/main/main.html',
+            'app/components/main/main-controller.js'
         ]);
     });
 
@@ -50,6 +53,9 @@ describe('angular-es6-webpack:app with default prompt answers', function () {
     });
 
     it('should import the correct router', function() {
-        assert.fileContent('app/app.js', /import 'angular-ui-router'/);
+        assert.fileContent([
+            ['app/app.js', /import 'angular-ui-router'/],
+            ['app/app.js', /'ngResource', 'ui-router',/]
+        ]);
     });
 });
