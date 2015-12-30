@@ -24,6 +24,12 @@ module.exports = yeoman.Base.extend({
                 name: 'ngVersion',
                 message: 'What version of Angular would you like to use?',
                 default: '1.4.7'
+            },
+            {
+                type: 'confirm',
+                name: 'uiRouter',
+                message: 'Would you like to use ui-router?',
+                default: true
             }
         ];
 
