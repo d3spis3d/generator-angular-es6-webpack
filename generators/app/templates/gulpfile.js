@@ -5,6 +5,7 @@ var gutil = require("gulp-util");
 var rename = require('gulp-rename');
 var git = require('gulp-git');
 var ngConstant = require('gulp-ng-constant');
+var rm = require('gulp-rimraf');
 
 var KarmaServer = require('karma').Server;
 var webpack = require("webpack");

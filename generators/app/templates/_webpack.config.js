@@ -5,7 +5,7 @@ module.exports = {
     entry: './app/app.js',
     output: {
         path: __dirname + '/dist',
-        filename: '[hash]_bundle.js'
+        filename: 'bundle.js'
     },
     module: {
         preLoaders: [

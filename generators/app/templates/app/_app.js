@@ -8,4 +8,8 @@ import 'services/services';
 import 'directives/directives';
 import 'services/version-service';
 
-angular.module('<%= appName.replace(/\s/g, '') %>', ['ngResource', <% if(uiRouter) { %>'ui.router'<% } else { %>'ngRoute'<% } %>,  'services', 'directives', 'ngSanitize', 'version']);
+import mainRoutes from 'components/main/main.routes';
+
+angular.module('<%= appName.replace(/\s/g, '') %>', ['ngResource', <% if(uiRouter) { %>'ui.router'<% } else { %>'ngRoute'<% } %>, 'services', 'directives', 'ngSanitize', 'version'])
+
+.config(mainRoutes);

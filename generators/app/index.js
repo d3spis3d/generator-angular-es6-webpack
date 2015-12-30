@@ -66,6 +66,7 @@ module.exports = yeoman.Base.extend({
             );
 
             this.template('app/_app.js', 'app/app.js', context);
+            this.template('app/_index.html', 'app/index.html', context);
 
             this.fs.copy(
                 this.templatePath('app/components/main/main.html'),
@@ -103,6 +104,16 @@ module.exports = yeoman.Base.extend({
             this.fs.copy(
                 this.templatePath('VERSION'),
                 this.destinationPath('VERSION')
+            );
+
+            this.fs.copy(
+                this.templatePath('.babelrc'),
+                this.destinationPath('.babelrc')
+            );
+
+            this.fs.copy(
+                this.templatePath('.eslintignore'),
+                this.destinationPath('.eslintignore')
             );
         }
     },
