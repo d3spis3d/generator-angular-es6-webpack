@@ -7,7 +7,6 @@ module.exports = yeoman.Base.extend({
     prompting: function () {
         var done = this.async();
 
-        // Have Yeoman greet the user.
         this.log(yosay(
             'Welcome to the flawless ' + chalk.red('Angular ES6 Webpack') + ' generator!'
         ));
@@ -52,6 +51,11 @@ module.exports = yeoman.Base.extend({
             this.template('_package.json', 'package.json', context);
 
             this.fs.copy(
+                this.templatePath('gulpfile.js'),
+                this.destinationPath('gulpfile.js')
+            );
+
+            this.fs.copy(
                 this.templatePath('app/directives'),
                 this.destinationPath('app/directives')
             );
@@ -62,6 +66,14 @@ module.exports = yeoman.Base.extend({
             );
 
             this.template('app/_app.js', 'app/app.js', context);
+
+            this.fs.copy(
+                this.templatePath('app/components/main.html'),
+                this.destinationPath('app/components/main.html')
+            );
+
+            this.template('app/components/main/_main.routes.js', 'app/components/main/main.routes.js', context);
+            this.template('app/components/main/_main-controller.js', 'app/components/main/main-controller.js', context);
 
             this.fs.copy(
                 this.templatePath('test'),
@@ -86,6 +98,11 @@ module.exports = yeoman.Base.extend({
             this.fs.copy(
                 this.templatePath('gitignore'),
                 this.destinationPath('.gitignore')
+            );
+
+            this.fs.copy(
+                this.templatePath('VERSION'),
+                this.destinationPath('VERSION')
             );
         }
     },

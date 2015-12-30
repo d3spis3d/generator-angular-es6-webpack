@@ -15,9 +15,11 @@ describe('angular-es6-webpack:app with default prompt answers', function () {
     it('should creates files', function () {
         assert.file([
             'package.json',
+            'gulpfile.js',
             '.editorconfig',
             '.eslintrc',
             '.gitignore',
+            'VERSION',
             'webpack.config.js',
             'test/spec/tests.webpack.js',
             'test/karma.conf.js',
