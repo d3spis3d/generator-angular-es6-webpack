@@ -60,4 +60,12 @@ describe('angular-es6-webpack:app with default prompt answers', function () {
             ['app/app.js', /'ngResource', 'ui.router',/]
         ]);
     });
+
+    it('should use correct routing in main.routes.js', function() {
+        assert.fileContent('app/components/main/main.routes.js', /\$stateProvider\.state\('main'/);
+    });
+
+    it('should use the correct view directive in index.html', function() {
+        assert.fileContent('app/index.html', /<div ui-view><\/div>/);
+    });
 });

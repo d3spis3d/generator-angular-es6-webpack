@@ -65,4 +65,12 @@ describe('angular-es6-webpack:app with prompt answers', function () {
             ['app/app.js', /'ngResource', 'ngRoute',/]
         ]);
     });
+
+    it('should use correct routing in main.routes.js', function() {
+        assert.fileContent('app/components/main/main.routes.js', /\$routeProvider\.when\('\/'/);
+    });
+
+    it('should use the correct view directive in index.html', function() {
+        assert.fileContent('app/index.html', /<div ng-view><\/div>/);
+    });
 });
