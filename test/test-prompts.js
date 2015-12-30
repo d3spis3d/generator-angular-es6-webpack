@@ -55,6 +55,9 @@ describe('angular-es6-webpack:app with prompt answers', function () {
     });
 
     it('should import the correct router', function() {
-        assert.fileContent('app/app.js', /import 'angular-route'/);
+        assert.fileContent([
+            ['app/app.js', /import 'angular-route'/],
+            ['app/app.js', /'ngResource', 'ngRoute',/]
+        ]);
     });
 });
