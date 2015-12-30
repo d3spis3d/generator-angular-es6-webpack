@@ -68,8 +68,8 @@ module.exports = yeoman.Base.extend({
             this.template('app/_app.js', 'app/app.js', context);
 
             this.fs.copy(
-                this.templatePath('app/components/main.html'),
-                this.destinationPath('app/components/main.html')
+                this.templatePath('app/components/main/main.html'),
+                this.destinationPath('app/components/main/main.html')
             );
 
             this.template('app/components/main/_main.routes.js', 'app/components/main/main.routes.js', context);
