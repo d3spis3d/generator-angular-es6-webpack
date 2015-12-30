@@ -3,55 +3,60 @@ var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
 
-module.exports = yeoman.generators.Base.extend({
-  prompting: function () {
-    var done = this.async();
+module.exports = yeoman.Base.extend({
+    prompting: function () {
+        var done = this.async();
 
-    // Have Yeoman greet the user.
-    this.log(yosay(
-      'Welcome to the flawless ' + chalk.red('Angular ES6 Webpack') + ' generator!'
-    ));
+        // Have Yeoman greet the user.
+        this.log(yosay(
+            'Welcome to the flawless ' + chalk.red('Angular ES6 Webpack') + ' generator!'
+        ));
 
-    var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
+        var prompts = [
+            {
+                type: 'input',
+                name: 'appName',
+                message: 'What is the applications name?',
+                default: ''
+            },
+            {
+                type: 'input',
+                name: 'ngVersion',
+                message: 'What version of Angular would you like to use?',
+                default: '1.4.7'
+            }
+        ];
 
-    this.prompt(prompts, function (props) {
-      this.props = props;
-      // To access props later use this.props.someOption;
-
-      done();
-    }.bind(this));
-  },
-
-  writing: {
-    app: function () {
-      this.fs.copy(
-        this.templatePath('_package.json'),
-        this.destinationPath('package.json')
-      );
-      this.fs.copy(
-        this.templatePath('_bower.json'),
-        this.destinationPath('bower.json')
-      );
+        this.prompt(prompts, function (props) {
+            this.appName = props.appName;
+            this.ngVersion = props.ngVersion;
+            done();
+        }.bind(this));
     },
 
-    projectfiles: function () {
-      this.fs.copy(
-        this.templatePath('editorconfig'),
-        this.destinationPath('.editorconfig')
-      );
-      this.fs.copy(
-        this.templatePath('jshintrc'),
-        this.destinationPath('.jshintrc')
-      );
-    }
-  },
+    writing: {
+        app: function () {
+            var context = {
+                this.ngVersion: '1.4.8',
+                this.appName: 'Test App',
+            };
 
-  install: function () {
-    this.installDependencies();
-  }
+            this.template('_package.json', 'package.json', context);
+        },
+
+        projectfiles: function () {
+            this.fs.copy(
+                this.templatePath('editorconfig'),
+                this.destinationPath('.editorconfig')
+            );
+            this.fs.copy(
+                this.templatePath('eslintrc'),
+                this.destinationPath('.eslintrc')
+            );
+        }
+    },
+
+    install: function () {
+        this.npmInstall();
+    }
 });

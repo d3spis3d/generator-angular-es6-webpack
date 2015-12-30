@@ -1,5 +1,10 @@
 {
-  "name": "package",
+  "name": "<%= appName.toLowerCase().replace(/\s/g, '-') %>",
   "version": "0.0.0",
-  "dependencies": {}
+  "dependencies": {
+    "angular": "<%= ngVersion %>",
+    "angular-sanitize": "<%= ngVersion %>",
+    "angular-resource": "<%= ngVersion %>",
+    "jquery": "^2.1.4"
+  }
 }
