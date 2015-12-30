@@ -5,11 +5,7 @@
     "angular": "<%= ngVersion %>",
     "angular-sanitize": "<%= ngVersion %>",
     "angular-resource": "<%= ngVersion %>",
-    <% if(uiRouter) { %>
-    "angular-ui-router": "^0.2.15",
-    <% } else { %>
-    "angular-route": "<%= ngVersion %>",
-    <% } %>
+    <% if(uiRouter) { %> "angular-ui-router": "^0.2.15",<% } else { %>"angular-route": "<%= ngVersion %>",<% } %>
     "jquery": "^2.1.4"
   },
   "devDependencies": {
