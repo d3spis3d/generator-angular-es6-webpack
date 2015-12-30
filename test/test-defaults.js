@@ -57,7 +57,7 @@ describe('angular-es6-webpack:app with default prompt answers', function () {
     it('should import the correct router', function() {
         assert.fileContent([
             ['app/app.js', /import 'angular-ui-router'/],
-            ['app/app.js', /'ngResource', 'ui-router',/]
+            ['app/app.js', /'ngResource', 'ui.router',/]
         ]);
     });
 });
