@@ -36,6 +36,7 @@ module.exports = yeoman.Base.extend({
         this.prompt(prompts, function (props) {
             this.appName = props.appName;
             this.ngVersion = props.ngVersion;
+            this.uiRouter = props.uiRouter;
             done();
         }.bind(this));
     },
@@ -45,6 +46,7 @@ module.exports = yeoman.Base.extend({
             var context = {
                 ngVersion: this.ngVersion,
                 appName: this.appName,
+                uiRouter: this.uiRouter
             };
 
             this.template('_package.json', 'package.json', context);
