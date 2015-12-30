@@ -17,7 +17,7 @@ module.exports = yeoman.Base.extend({
                 type: 'input',
                 name: 'appName',
                 message: 'What is the applications name?',
-                default: ''
+                default: 'Angular ES6 App'
             },
             {
                 type: 'input',
