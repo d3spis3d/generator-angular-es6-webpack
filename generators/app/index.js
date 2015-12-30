@@ -37,8 +37,8 @@ module.exports = yeoman.Base.extend({
     writing: {
         app: function () {
             var context = {
-                this.ngVersion: '1.4.8',
-                this.appName: 'Test App',
+                ngVersion: this.ngVersion,
+                appName: this.appName,
             };
 
             this.template('_package.json', 'package.json', context);
