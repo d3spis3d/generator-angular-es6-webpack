@@ -50,6 +50,16 @@ module.exports = yeoman.Base.extend({
             };
 
             this.template('_package.json', 'package.json', context);
+
+            this.fs.copy(
+                this.templatePath('test'),
+                this.destinationPath('test')
+            );
+
+            this.fs.copy(
+                this.templatePath('_webpack.config.js'),
+                this.destinationPath('webpack.config.js')
+            );
         },
 
         projectfiles: function () {
@@ -60,6 +70,10 @@ module.exports = yeoman.Base.extend({
             this.fs.copy(
                 this.templatePath('eslintrc'),
                 this.destinationPath('.eslintrc')
+            );
+            this.fs.copy(
+                this.templatePath('gitignore'),
+                this.destinationPath('.gitignore')
             );
         }
     },
