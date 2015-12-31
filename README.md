@@ -1,53 +1,28 @@
-# Still under construction
+# AngularJS + ES6 + Webpack Generator [![Build Status](https://secure.travis-ci.org/d3spis3d/generator-angular-es6-webpack.png?branch=master)](https://travis-ci.org/d3spis3d/generator-angular-es6-webpack)
 
+> [Yeoman](http://yeoman.io) generator for AngularJS applications built with Webpack and Babel.js
 
+## Usage
 
+For information on using Yeoman check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
 
-
-# generator-angular-es6-webpack [![Build Status](https://secure.travis-ci.org/d3spis3d/generator-angular-es6-webpack.png?branch=master)](https://travis-ci.org/d3spis3d/generator-angular-es6-webpack)
-
-> [Yeoman](http://yeoman.io) generator
-
-
-## Getting Started
-
-### What is Yeoman?
-
-Trick question. It's not a thing. It's this guy:
-
-![](http://i.imgur.com/JHaAlBJ.png)
-
-Basically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.
-
-Not every new computer comes with a Yeoman pre-installed. He lives in the [npm](https://npmjs.org) package repository. You only have to ask for him once, then he packs up and moves into your hard drive. *Make sure you clean up, he likes new and shiny things.*
-
-```bash
-npm install -g yo
+Install `yo` and `generator-angular-es6-webpack`:
+```
+npm install -g yo generator-angular-es6-webpack
 ```
 
-### Yeoman Generators
-
-Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
-
-To install generator-angular-es6-webpack from npm, run:
-
-```bash
-npm install -g generator-angular-es6-webpack
+Make a new directory for your application:
+```
+mkdir new-project && cd $_
 ```
 
-Finally, initiate the generator:
-
-```bash
+Run the generator:
+```
 yo angular-es6-webpack
 ```
 
-### Getting To Know Yeoman
-
-Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.
-
-If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
-
+Follow the prompts to scaffold the application. Once finished run `gulp serve` to run Webpack's development server and `gulp build` to build minified bundle.
 
 ## License
 
-MIT
+[MIT](https://github.com/d3spis3d/generator-angular-es6-webpack/blob/master/LICENSE)
