@@ -1,6 +1,6 @@
 {
   "name": "generator-angular-es6-webpack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Yeoman generator for Angular with ES6 and Webpack",
   "license": "MIT",
   "repository": "d3spis3d/generator-angular-es6-webpack",
