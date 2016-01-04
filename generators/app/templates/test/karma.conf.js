@@ -24,11 +24,15 @@ module.exports = function(config) {
           },
           {
               test: /.html$/,
-              loader: 'ngtemplate?relativeTo=' + __dirname + '/../app!html?root=' + __dirname + '/../app'
+              loader: 'ngtemplate?relativeTo=/app!html?root=' + __dirname + '/../app'
           },
           {
               test: /\.scss$/,
               loaders: ["style", "css", "sass"]
+          },
+          {
+              test: /\.png$/,
+              loader: 'file-loader'
           }
         ]
       },

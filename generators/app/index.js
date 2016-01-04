@@ -87,9 +87,21 @@ module.exports = yeoman.Base.extend({
             this.template('app/components/main/_main-controller.js', 'app/components/main/main-controller.js', context);
 
             this.fs.copy(
-                this.templatePath('test'),
-                this.destinationPath('test')
+                this.templatePath('test/spec/tests.webpack.js'),
+                this.destinationPath('test/spec/tests.webpack.js')
             );
+
+            this.fs.copy(
+                this.templatePath('test/karma.conf.js'),
+                this.destinationPath('test/karma.conf.js')
+            );
+
+            this.fs.copy(
+                this.templatePath('test/karma.ci.conf.js'),
+                this.destinationPath('test/karma.ci.conf.js')
+            );
+
+            this.template('test/spec/components/_main-controller-test.js', 'test/spec/components/main-controller-test.js', context);
 
             this.fs.copy(
                 this.templatePath('_webpack.config.js'),

@@ -1,6 +1,6 @@
 require('core-js');
 require('core-js/es5');
-require('babel-core/polyfill');
+require('babel-polyfill');
 
 require('app');
 require('angular-mocks');
