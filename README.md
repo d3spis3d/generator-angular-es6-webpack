@@ -2,6 +2,8 @@
 
 > [Yeoman](http://yeoman.io) generator for AngularJS applications built with Webpack and Babel.js
 
+More info on project structure [Angular + ES6 + Webpack blog post](http://d3spis3d.github.io/angular/webpack/2016/01/06/angular-es6-webpack.html)
+
 ## Usage
 
 For information on using Yeoman check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
