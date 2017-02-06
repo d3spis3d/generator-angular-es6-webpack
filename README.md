@@ -25,6 +25,10 @@ yo angular-es6-webpack
 
 Follow the prompts to scaffold the application. Once finished run `gulp serve` to run Webpack's development server and `gulp build` to build minified bundle.
 
+## Version Service
+
+The `version-service` is generated at build time using the `VERSION` file and a portion of the git hash for the commit. As a result of being created by the build, it is recommended to run the `gulp build` at least once before attempting to run the tests or running the development server.
+
 ## License
 
 [MIT](https://github.com/d3spis3d/generator-angular-es6-webpack/blob/master/LICENSE)
